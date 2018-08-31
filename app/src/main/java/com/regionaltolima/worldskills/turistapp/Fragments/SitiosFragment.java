@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -90,7 +91,12 @@ public class SitiosFragment extends Fragment {
         net = new Database(getContext(), "SitiosL", null, 1);
         db = net.getReadableDatabase();
         recyclerView = view.findViewById(R.id.recycler_Sitios);
-        recyclerView.setLayoutManager(new LinearLayoutManager(null));
+
+        if (S.VIEW == S.LIST){
+            recyclerView.setLayoutManager(new LinearLayoutManager(null));
+        }else{
+            recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        }
 
         llenarReciclerView();
 
