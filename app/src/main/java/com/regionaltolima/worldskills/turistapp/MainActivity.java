@@ -71,12 +71,35 @@ public class MainActivity extends AppCompatActivity
      * Metodo Para Mostrar el Fragment Correspondiente
      */
     private void iniciarFragment() {
+        reiniciarContenedor();
         setTitle(setTit());
+        verificarView();
 
-        if (S.CONTEXTO == S.INICIO){
-           getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentInicio).commit();
-        }else{
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentSitios).commit();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+            if (S.CONTEXTO == S.INICIO){
+               getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentInicio).commit();
+            }else{
+                getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentSitios).commit();
+            }
+            }
+        },100);
+    }
+
+    private void verificarView() {
+        if (S.is){
+            if (S.VIEW == S.LIST){
+                item_grid.setVisible(true);
+                item_list.setVisible(false);
+
+            }else if(S.VIEW == S.GRID){
+                item_grid.setVisible(false);
+                item_list.setVisible(true);
+            }
+        }else {
+            item_list.setVisible(false);
+            item_grid.setVisible(false);
         }
     }
 
@@ -118,8 +141,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        /*item_list = menu.findItem(R.id.m_list);
-        item_grid = menu.findItem(R.id.m_grid);*/
+        item_list = menu.findItem(R.id.action_list);
+        item_grid = menu.findItem(R.id.action_grid);
         return true;
     }
 
@@ -131,11 +154,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_list) {
+            S.VIEW = S.LIST;
+        }if (id == R.id.action_grid) {
+            S.VIEW = S.GRID;
         }
 
-        reiniciarContenedor();
+        iniciarFragment();
         return super.onOptionsItemSelected(item);
     }
 
@@ -147,17 +172,20 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_inicio) {
             S.CONTEXTO = S.INICIO;
+            S.is = false;
         } else if (id == R.id.nav_cc) {
             S.CONTEXTO = S.CENTROS;
+            S.is = true;
 
         } else if (id == R.id.nav_hoteles) {
             S.CONTEXTO = S.HOTELES;
+            S.is = true;
 
         } else if (id == R.id.nav_restaurantes) {
             S.CONTEXTO = S.RESTAURANTES;
+            S.is = true;
         }
 
-        reiniciarContenedor();
         iniciarFragment();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

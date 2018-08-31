@@ -13,4 +13,9 @@ public class S {
 
 
     public static int CONTEXTO = INICIO;
+
+    public static boolean is = false;
+    public static int LIST = 1;
+    public static int GRID = 2;
+    public static int VIEW = LIST;
 }
