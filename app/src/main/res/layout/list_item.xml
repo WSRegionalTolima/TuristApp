@@ -38,7 +38,7 @@
                 android:fontFamily="@font/brlnsr"
                 android:text="Nombre"
                 android:textColor="@android:color/background_dark"
-                android:textSize="24sp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView

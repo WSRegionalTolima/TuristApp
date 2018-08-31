@@ -123,6 +123,9 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * Reinicia el contenedor de los fragmentos
+     */
     private void reiniciarContenedor() {
         getSupportFragmentManager().beginTransaction().remove(fragmentSitios).commit();
     }

@@ -26,7 +26,14 @@ public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewH
     @NonNull
     @Override
     public AdaptadorSitios.ViewHolderSitios onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, null);
+        View view;
+
+        if (S.VIEW == S.LIST){
+           view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, null);
+        }else {
+           view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item, null);
+        }
+
 
         return new ViewHolderSitios(view);
     }
@@ -36,7 +43,9 @@ public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewH
 
         holder.iv_sitio.setImageResource(sitios.get(position).getImagenSitio());
        holder.tv_nombre.setText(sitios.get(position).getNombreSitio());
-       holder.tv_descripcioncorta.setText(sitios.get(position).getDescCortaSitio());
+       if (S.VIEW == S.LIST){
+           holder.tv_descripcioncorta.setText(sitios.get(position).getDescCortaSitio());
+       }
        holder.tv_ubicacion.setText(sitios.get(position).getUbicacionSitio());
 
     }
