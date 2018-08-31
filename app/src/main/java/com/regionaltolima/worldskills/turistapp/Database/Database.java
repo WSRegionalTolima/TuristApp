@@ -23,6 +23,7 @@ public class Database extends SQLiteOpenHelper {
                 "latSitio double," +
                 "lonSitio)");
 
+
         db.execSQL("INSERT INTO Sitios " +
                 "VALUES('Sitios'," +
                 "'@drawable/monserrate'," +
