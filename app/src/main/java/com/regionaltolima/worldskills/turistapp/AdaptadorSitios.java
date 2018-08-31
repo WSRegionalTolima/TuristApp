@@ -15,9 +15,10 @@ import java.util.ArrayList;
 /**
  * Clase para generar el Adaptador de Las Listas de Sitios
  */
-public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewHolderSitios > {
+public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewHolderSitios > implements View.OnClickListener {
 
     ArrayList<Sitios> sitios;
+    View.OnClickListener listener;
 
     public AdaptadorSitios(ArrayList sitios) {
         this.sitios = sitios;
@@ -34,7 +35,7 @@ public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewH
            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item, null);
         }
 
-
+        view.setOnClickListener(this);
         return new ViewHolderSitios(view);
     }
 
@@ -50,9 +51,18 @@ public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewH
 
     }
 
+    public void setOnClickListener(){
+
+    }
+
     @Override
     public int getItemCount() {
         return sitios.size();
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     public class ViewHolderSitios extends RecyclerView.ViewHolder {
