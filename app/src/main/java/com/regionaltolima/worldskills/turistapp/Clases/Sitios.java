@@ -1,4 +1,4 @@
-package com.regionaltolima.worldskills.turistapp;
+package com.regionaltolima.worldskills.turistapp.Clases;
 
 import java.io.Serializable;
 
@@ -18,6 +18,10 @@ public class Sitios implements Serializable {
     private double latSitio;
     private double lonSitio;
 
+
+    /**
+     * Constuye Un Objeto de Tipo Sitio que guarda toda su informacion
+     */
     public Sitios(String tipoSitio, int imagenSitio, String nombreSitio, String descCortaSitio, String ubicacionSitio, String descLargaSitio, double latSitio, double lonSitio) {
         this.tipoSitio = tipoSitio;
         this.imagenSitio = imagenSitio;
@@ -27,72 +31,72 @@ public class Sitios implements Serializable {
         this.descLargaSitio = descLargaSitio;
         this.latSitio = latSitio;
         this.lonSitio = lonSitio;
+
     }
 
-
-
+    /**
+     * Obtengo el Tipo de sitio del obgeto Sitio
+     * @return
+     */
     public String getTipoSitio() {
         return tipoSitio;
     }
 
-    public void setTipoSitio(String tipoSitio) {
-        this.tipoSitio = tipoSitio;
-    }
-
+    /**
+     * Obtengo La imagen del Sitio
+     * @return
+     */
     public int getImagenSitio() {
         return imagenSitio;
     }
 
-    public void setImagenSitio(int imagenSitio) {
-        this.imagenSitio = imagenSitio;
-    }
-
+    /**
+     * Obtengo el nombre del objeto Sitio
+     * @return
+     */
     public String getNombreSitio() {
         return nombreSitio;
     }
 
-    public void setNombreSitio(String nombreSitio) {
-        this.nombreSitio = nombreSitio;
-    }
-
-    public String getDescLargaSitio() {
-        return descLargaSitio;
-    }
-
-    public void setDescLargaSitio(String descLargaSitio) {
-        this.descLargaSitio = descLargaSitio;
-    }
-
+    /**
+     * Obtengo la descripcion corta del objeto Sitio
+     * @return
+     */
     public String getDescCortaSitio() {
         return descCortaSitio;
     }
 
-    public void setDescCortaSitio(String descCortaSitio) {
-        this.descCortaSitio = descCortaSitio;
+    /**
+     * Obtengo la Descripcion Larga del Sitio
+     * @return
+     */
+    public String getDescLargaSitio() {
+        return descLargaSitio;
     }
 
+    /**
+     * Obtengo la ubicacion del objeto Sitio
+     * @return
+     */
     public String getUbicacionSitio() {
         return ubicacionSitio;
     }
 
-    public void setUbicacionSitio(String ubicacionSitio) {
-        this.ubicacionSitio = ubicacionSitio;
-    }
-
+    /**
+     * Obtengo la Latitud del objeto Sitio
+     * @return
+     */
     public double getLatSitio() {
         return latSitio;
     }
 
-    public void setLatSitio(double latSitio) {
-        latSitio = latSitio;
-    }
-
+    /**
+     * Obtengo la latitud del objeto Sitio
+     * @return
+     */
     public double getLonSitio() {
         return lonSitio;
     }
 
-    public void setLonSitio(double lonSitio) {
-        lonSitio = lonSitio;
-    }
 
 }

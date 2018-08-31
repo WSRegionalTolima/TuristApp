@@ -1,12 +1,8 @@
-package com.regionaltolima.worldskills.turistapp;
+package com.regionaltolima.worldskills.turistapp.Activities;
 
 import android.net.Uri;
-import android.nfc.cardemulation.HostNfcFService;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,6 +14,8 @@ import android.view.MenuItem;
 
 import com.regionaltolima.worldskills.turistapp.Fragments.InicioFragment;
 import com.regionaltolima.worldskills.turistapp.Fragments.SitiosFragment;
+import com.regionaltolima.worldskills.turistapp.R;
+import com.regionaltolima.worldskills.turistapp.Clases.S;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -35,15 +33,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -87,6 +76,9 @@ public class MainActivity extends AppCompatActivity
         },100);
     }
 
+    /**
+     * Verifica el modo List o Grid
+     */
     private void verificarView() {
         if (S.is){
             if (S.VIEW == S.LIST){
@@ -110,7 +102,7 @@ public class MainActivity extends AppCompatActivity
     private String setTit() {
 
         if (S.CONTEXTO == S.CENTROS){
-            return "Centros Comerciales";
+            return "Sitios";
         }
         if (S.CONTEXTO == S.HOTELES){
             return "Hoteles";

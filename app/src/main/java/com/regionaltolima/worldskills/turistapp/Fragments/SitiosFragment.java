@@ -14,13 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.regionaltolima.worldskills.turistapp.AdaptadorSitios;
 import com.regionaltolima.worldskills.turistapp.Database.Database;
 import com.regionaltolima.worldskills.turistapp.R;
-import com.regionaltolima.worldskills.turistapp.S;
-import com.regionaltolima.worldskills.turistapp.Sitios;
+import com.regionaltolima.worldskills.turistapp.Clases.S;
+import com.regionaltolima.worldskills.turistapp.Clases.Sitios;
 
 import java.util.ArrayList;
 
@@ -108,6 +107,10 @@ public class SitiosFragment extends Fragment {
         return view;
     }
 
+
+    /**
+     * Metodo que hace la consulta a la base de datos y llena la lista
+     */
     public void llenarReciclerView(){
         listaSitios = new ArrayList();
         String tipoSitio = "", imagen = "", nombreSitio = "", desccSitio = "", ubicacionSitio = "", desclSitio = "";
@@ -132,6 +135,10 @@ public class SitiosFragment extends Fragment {
 
     }
 
+    /**
+     * Seleciona el tipo de sitios a mostrar
+     * @return la consulta correspondiente
+     */
     private String sitiosEscogidos() {
         if (S.CONTEXTO == S.CENTROS){
             return "SELECT * FROM Sitios WHERE tipoSitio = 'Sitios'";

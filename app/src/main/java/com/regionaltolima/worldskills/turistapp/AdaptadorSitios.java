@@ -1,6 +1,5 @@
 package com.regionaltolima.worldskills.turistapp;
 
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.regionaltolima.worldskills.turistapp.Clases.S;
+import com.regionaltolima.worldskills.turistapp.Clases.Sitios;
 
 import java.util.ArrayList;
 
@@ -65,6 +67,9 @@ public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewH
 
     }
 
+    /**
+     * Clase para controlar cada elemento del adaptador
+     */
     public class ViewHolderSitios extends RecyclerView.ViewHolder {
         ImageView iv_sitio;
         TextView tv_nombre, tv_descripcioncorta, tv_ubicacion;

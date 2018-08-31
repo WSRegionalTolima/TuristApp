@@ -1,4 +1,4 @@
-package com.regionaltolima.worldskills.turistapp;
+package com.regionaltolima.worldskills.turistapp.Clases;
 
 /**
  * Clase que me ayuda a guardar Valores
