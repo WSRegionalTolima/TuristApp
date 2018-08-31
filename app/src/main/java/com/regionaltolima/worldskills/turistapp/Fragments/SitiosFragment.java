@@ -87,14 +87,14 @@ public class SitiosFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sitios, container, false);
 
-        net = new Database(getContext(), "Sitios", null, 1);
+        net = new Database(getContext(), "SitiosL", null, 1);
         db = net.getReadableDatabase();
         recyclerView = view.findViewById(R.id.recycler_Sitios);
         recyclerView.setLayoutManager(new LinearLayoutManager(null));
 
         llenarReciclerView();
 
-       LinearLayout.LayoutParams l = new LinearLayout.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.MATCH_PARENT);
+        LinearLayout.LayoutParams l = new LinearLayout.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT);
         adapter = new AdaptadorSitios(listaSitios);
 
         recyclerView.setAdapter(adapter);
@@ -110,21 +110,20 @@ public class SitiosFragment extends Fragment {
 
         Cursor cursor = db.rawQuery(sitiosEscogidos(),null);
 
-        cursor.moveToFirst();
         while (cursor.moveToNext()){
             tipoSitio = cursor.getString(0);
             imagen = cursor.getString(1);
             imagenSitio = getContext().getResources().getIdentifier(imagen,null, getContext().getPackageName());
-            Toast.makeText(getContext(), imagen,Toast.LENGTH_SHORT).show();
             nombreSitio = cursor.getString(2);
             desccSitio = cursor.getString(3);
             ubicacionSitio = cursor.getString(4);
             desclSitio = cursor.getString(5);
             latSitio = cursor.getDouble(6);
             lonSitio = cursor.getDouble(5);
+            listaSitios.add(new Sitios(tipoSitio,imagenSitio,nombreSitio,desccSitio,ubicacionSitio,desclSitio,latSitio,lonSitio));
         }
 
-        listaSitios.add(new Sitios(tipoSitio,imagenSitio,nombreSitio,desccSitio,ubicacionSitio,desclSitio,latSitio,lonSitio));
+
     }
 
     private String sitiosEscogidos() {
