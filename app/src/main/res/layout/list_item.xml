@@ -46,14 +46,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gothic"
-                android:text="Descripcion Corta" />
+                android:text="Descripcion Corta"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/ubicacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gothic"
-                android:text="Ubicacion" />
+                android:text="Ubicacion"
+                android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
 
