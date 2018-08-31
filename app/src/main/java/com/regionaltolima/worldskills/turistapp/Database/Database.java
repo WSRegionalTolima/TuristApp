@@ -99,6 +99,7 @@ public class Database extends SQLiteOpenHelper {
                 "'@drawable/hotelcontinentals'," +
                 "'Hotel Continental Bluedoors\n'," +
                 "'Hotel sofisticado con un bar restaurante moderno y una cafetería, además de un gimnasio y un spa.\n'," +
+                "'Avenida Jiménez No. 4 - 16 Candelaria - Centro Historico',"+
                 "'\"Este elegante hotel con todo suites, situado a 4 minutos a pie de los objetos de oro del Museo del Oro, también se encuentra a 8 minutos a pie de las obras de arte del Museo Botero y a 11 minutos a pie de la Plaza de Bolívar, la plaza principal de la ciudad.\n" +
                 "Las luminosas y modernas suites disponen de Wi-Fi gratis, televisiones de pantalla plana y minibares, además de cocinas y salas de estar.\n" +
                 "El aparcamiento es gratuito. El desayuno se ofrece por un suplemento. Entre el resto de instalaciones que se incluyen en el hotel se encuentran una panadería cafetería, un bar restaurante moderno con terraza, un gimnasio y un spa.\"\n'," +
@@ -132,8 +133,11 @@ public class Database extends SQLiteOpenHelper {
                 "-74.055213)," +
                 "('Hotel','@drawable/hotelnh','Hotel NH Collection Bogota','Habitaciones y suites modernas en un hotel actual con un restaurante internacional, un piano bar y un spa.'," +
                 "'Cl. 114 #6-2, Bogotá, Cundinamarca'," +
+                "'Este moderno hotel de lujo se encuentra a 3 minutos a pie de una parada de autobús, a 2 km de las tiendas y los clubes del parque de la 93 y a 8 km del parque de atracciones Salitre Mágico.\n" +
+                "Las habitaciones están insonorizadas y son elegantes. Están equipadas con Wi-Fi gratis, televisión de pantalla plana, base para iPod, minibar y sala de estar. Las habitaciones de categoría superior disponen de sofá cama, cafetera y tetera; algunas tienen terraza. Las suites cuentan con cocina y balcón amueblado.\n" +
+                "El hotel dispone de una sala de desayunos informal con una claraboya, un restaurante sofisticado con ventanas de suelo a techo, un bar de deportes con una mesa de billar y sushi, un gimnasio y un spa.',"+
                 "4.6918426," +
-                "-74.0340631)," +
+                "-74.0340631),"+
                 "('Rest','@drawable/juanalaloca','Juana La Loca','Buenos cocteles, agradable grupos','Calle 90 # 11-13, Bogotá','\" Del primer menú de Juana La Loca quedan pocos platillos. Los chicharrones de cochinillo con lima y jalapeño son de los pocos que sobreviven a ese difícil comienzo, hace dos años. De ese momento quedarán otros cinco platos, como clásicos de siempre –dice Rafael Londoño, al frente de la marca–. Pero, pasados unos ocho meses de funcionamiento empezamos el proceso de reformar la carta”.\n" +
                 "Londoño recuerda que se estrenó en el mundo de los restaurantes con Juana la Loca, cuando se asoció con el grupo Tragaluz de Barcelona. Pero no fue tan sencillo traer las cosas que eran exitosas en la ciudad catalana a Bogotá.\"\n'," +
                 "4.672065," +
@@ -158,7 +162,7 @@ public class Database extends SQLiteOpenHelper {
                 " Si la preferencia son pastas, estas son las opciones: pappardelle ai funghi, spaghetti neri, spaghetti al pomodoro, canelloni tramonti, gnocchi della famiglia, risotto del bosco, risotto mediterraneo, risotto nero di mare, los cocteles tramonti milenio (cognanc, vodka, amaretto y jugo de naranja) y tramonto (vodka, jugo de naranja y granadina) son sólo algunas de la variedad que se encuentra en el restaurante, además de otros más tradicionales como margarita, piña colada, daiquiri de fresa, mojito, dry martini, canelazo de aguardiente, sangría, entre otros.\"\n'," +
                 "4.6677515," +
                 "-74.0530483)," +
-                "('Rest','@drawable/tratoria','Es una buena invitación para sentirse como en casa, \n','Calle 71 # 5-73\n','\"Ubicado en el norte de la ciudad, La Divina Comedia es una buena invitación para sentirse como en casa, pues su chef Sergio Martin proviene de familia italiana y busca evocar y difundir de manera moderna, las enseñanzas que le dejo su nonna a su padre.\n" +
+                "('Rest','@drawable/tratoria','Tratoria','Es una buena invitación para sentirse como en casa, \n','Calle 71 # 5-73\n','\"Ubicado en el norte de la ciudad, La Divina Comedia es una buena invitación para sentirse como en casa, pues su chef Sergio Martin proviene de familia italiana y busca evocar y difundir de manera moderna, las enseñanzas que le dejo su nonna a su padre.\n" +
                 " Además de tener la referencia del libro de recetas de familia, el chef tiene gran experiencia en el arte de cocinar, el cual también difunde a través de cursos de pasta fresca, de programas de televisión y de su blog.\n" +
                 " Con una presentación de los platos sobria y elaborada de los platos, el restaurante divide su carta entre pastas cortas, pastas frescas y pastas rellenas. Además de remontarse al nombre del sitio, ofreciendo un aparte para los platos Del Paraíso (ristottos), Del Purgatorio (tortellis y tortellonis) y Del Inferno (varias opciones). Su especialidad es la pasta rellena, como el Canelloni Dante. De otros platos, también se recomienda el risotto funghi, el spaghetti Tripomodoro y el Penne Primavera. Quienes desean otras opciones más ligeras, hay variedad de ensaladas y sopas. \n" +
                 " En un ambiente cálido y sencillo con mesas de madera, sillas rojas y manteles blancos, se puede disfrutar también de diferentes risottos, pescados y carnes.\n" +
