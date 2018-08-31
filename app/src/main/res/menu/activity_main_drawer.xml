@@ -22,8 +22,4 @@
             android:title="Restaurantes" />
     </group>
 
-    <item android:title="Communicate">
-
-    </item>
-
 </menu>
