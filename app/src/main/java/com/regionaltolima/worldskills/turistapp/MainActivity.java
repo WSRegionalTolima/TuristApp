@@ -17,11 +17,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.regionaltolima.worldskills.turistapp.Fragments.InicioFragment;
+import com.regionaltolima.worldskills.turistapp.Fragments.SitiosFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, InicioFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        InicioFragment.OnFragmentInteractionListener,
+        SitiosFragment.OnFragmentInteractionListener {
 
     InicioFragment fragmentInicio;
+    SitiosFragment fragmentSitios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +53,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         fragmentInicio = new InicioFragment();
-        //fragmentLugares = new InicioFragment();
+        fragmentSitios = new SitiosFragment();
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -64,22 +69,37 @@ public class MainActivity extends AppCompatActivity
      * Metodo Para Mostrar el Frgament Correspondiente
      */
     private void iniciarFragment() {
-        reiniciarContenedor();
         setTitle(setTit());
 
         if (S.CONTEXTO == S.INICIO){
            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentInicio).commit();
         }else{
-            //getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentLugares).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentSitios).commit();
         }
     }
 
+    /**
+     * Metodo que Setea el Tirulo de La APP En el Toolbar
+     * @return nombre a setear
+     */
     private String setTit() {
-        return "Inicio";
+
+        if (S.CONTEXTO == S.CENTROS){
+            return "Centros Comerciales";
+        }
+        if (S.CONTEXTO == S.HOTELES){
+            return "Hoteles";
+        }
+        if (S.CONTEXTO == S.RESTAURANTES){
+            return "Restaurantes";
+        }
+        else {
+           return "Inicio";
+        }
     }
 
     private void reiniciarContenedor() {
-
+        getSupportFragmentManager().beginTransaction().remove(fragmentSitios).commit();
     }
 
     @Override
@@ -111,6 +131,7 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
 
+        reiniciarContenedor();
         return super.onOptionsItemSelected(item);
     }
 
@@ -121,15 +142,19 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_inicio) {
-
+            S.CONTEXTO = S.INICIO;
         } else if (id == R.id.nav_cc) {
+            S.CONTEXTO = S.CENTROS;
 
         } else if (id == R.id.nav_hoteles) {
+            S.CONTEXTO = S.HOTELES;
 
         } else if (id == R.id.nav_restaurantes) {
-
+            S.CONTEXTO = S.RESTAURANTES;
         }
 
+        reiniciarContenedor();
+        iniciarFragment();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
