@@ -25,13 +25,34 @@ public class Database extends SQLiteOpenHelper {
 
         db.execSQL("INSERT INTO Sitios " +
                 "VALUES('Sitios'," +
-                "'R.drawable.monserrate'," +
+                "'@drawable/monserrate'," +
                 "'Cerro de Monserrate'," +
                 "'El Cerro de Monserrate los espera durante los 365 días del año'," +
                 "'Carrera 2 E No. 21-48 | Paseo Bolívar, Bogota, Colombia'," +
                 "'El cerro de Monserrate es el más conocido de los cerros Orientales de Bogotá. Junto a Guadalupe es uno de los cerros tutelares de la ciudad. Monserrate tiene una altitud de 3152 m y se ubica sobre la cordillera oriental.1\u200B Los cerros de Bogotá, de origen sedimentario, tienen por lo menos 16 millones de años de antigüedad, con rocas de edad cretácica pertenecientes al Grupo guadalupe, en lo que se refiere al aspecto geológico. Hasta mediados del siglo XVII fue conocido como cerro de Las Nieves. La basílica del Señor de Monserrate ha sido lugar de peregrinación religiosa desde la época colonial y se constituye en un atractivo natural, religioso, gastronómico de la ciudad. Se puede ascender al cerro por el sendero peatonal, por teleférico o por funicular.'" +
                 ",4.6056941," +
-                " -74.0642803)");
+                " -74.0642803)," +
+                "('Sitios'," +
+                "'@drawable/simonbolivar'," +
+                "'Parque Metropolitano Simon Bolivar'," +
+                "'Área verde urbana con recorridos para caminantes y ciclistas, lago para andar en bote y un área de juego.'," +
+                "'Av. Calle 53 y Av. Esmeralda s/n, Bogotá, Cundinamarca'," +
+                "'Este es el más grande e importante de la ciudad por varias razones: su estratégica ubicación en el corazón de Bogotá; sus amplios espacios verdes acompañados de un innumerable número de árboles o por la cantidad y variedad de los escenarios que lo conforman.\n" +
+                "\n" +
+                "Este pulmón de la ciudad, que se ha convertido en parte esencial de la vida de los capitalinos, está conformado por:\n" +
+                "\n" +
+                "- El parque Central Simón Bolívar(Calle 63 y 53 entre carreras 48 y 68)\n" +
+                "- El parque Los Novios (o parque El Lago)\n" +
+                "- El Complejo Acuático\n" +
+                "- El Centro de Alto Rendimiento\n" +
+                "- La Cancha Popular de Golf\n" +
+                "- La Plaza de los Artesanos\n" +
+                "- El Salitre PRD (Recreodeportivo)\n" +
+                "- El Museo de los Niños\n" +
+                "- La biblioteca Virgilio Barco\n" +
+                "- La Unidad Deportiva El Salitre\n" +
+                "- El Salitre Mágico\n" +
+                "- El Jardín Botánico',4.6482361,-74.3009552)");
     }
 
     @Override

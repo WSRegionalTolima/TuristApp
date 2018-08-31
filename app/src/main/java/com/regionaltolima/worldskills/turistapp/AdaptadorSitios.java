@@ -1,5 +1,6 @@
 package com.regionaltolima.worldskills.turistapp;
 
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,6 +33,8 @@ public class AdaptadorSitios extends RecyclerView.Adapter< AdaptadorSitios.ViewH
 
     @Override
     public void onBindViewHolder(@NonNull AdaptadorSitios.ViewHolderSitios holder, int position) {
+
+        holder.iv_sitio.setImageResource(sitios.get(position).getImagenSitio());
        holder.tv_nombre.setText(sitios.get(position).getNombreSitio());
        holder.tv_descripcioncorta.setText(sitios.get(position).getDescCortaSitio());
        holder.tv_ubicacion.setText(sitios.get(position).getUbicacionSitio());

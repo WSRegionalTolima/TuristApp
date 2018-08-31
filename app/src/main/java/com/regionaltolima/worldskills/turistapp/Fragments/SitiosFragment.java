@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.regionaltolima.worldskills.turistapp.AdaptadorSitios;
 import com.regionaltolima.worldskills.turistapp.Database.Database;
@@ -107,17 +108,18 @@ public class SitiosFragment extends Fragment {
 
         Cursor cursor = db.rawQuery(sitiosEscogidos(),null);
 
+        cursor.moveToFirst();
         while (cursor.moveToNext()){
             tipoSitio = cursor.getString(0);
             imagen = cursor.getString(1);
             imagenSitio = getContext().getResources().getIdentifier(imagen,null, getContext().getPackageName());
+            Toast.makeText(getContext(), imagen,Toast.LENGTH_SHORT).show();
             nombreSitio = cursor.getString(2);
             desccSitio = cursor.getString(3);
             ubicacionSitio = cursor.getString(4);
             desclSitio = cursor.getString(5);
             latSitio = cursor.getDouble(6);
             lonSitio = cursor.getDouble(5);
-
         }
 
         listaSitios.add(new Sitios(tipoSitio,imagenSitio,nombreSitio,desccSitio,ubicacionSitio,desclSitio,latSitio,lonSitio));

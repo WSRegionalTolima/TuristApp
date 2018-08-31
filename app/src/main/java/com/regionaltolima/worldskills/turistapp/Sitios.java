@@ -29,6 +29,8 @@ public class Sitios implements Serializable {
         this.lonSitio = lonSitio;
     }
 
+
+
     public String getTipoSitio() {
         return tipoSitio;
     }
