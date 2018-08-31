@@ -95,14 +95,18 @@ public class Database extends SQLiteOpenHelper {
                 "Plaza del Trapecista (Plaza principal)\"\n'," +
                 "4.5926585," +
                 "-74.1263605)," +
-                "('Hotel','@drawable/hotelcontinentals','Hotel Continental Bluedoors\n'," +
+                "('Hotel'," +
+                "'@drawable/hotelcontinentals'," +
+                "'Hotel Continental Bluedoors\n'," +
                 "'Hotel sofisticado con un bar restaurante moderno y una cafetería, además de un gimnasio y un spa.\n'," +
                 "'\"Este elegante hotel con todo suites, situado a 4 minutos a pie de los objetos de oro del Museo del Oro, también se encuentra a 8 minutos a pie de las obras de arte del Museo Botero y a 11 minutos a pie de la Plaza de Bolívar, la plaza principal de la ciudad.\n" +
                 "Las luminosas y modernas suites disponen de Wi-Fi gratis, televisiones de pantalla plana y minibares, además de cocinas y salas de estar.\n" +
                 "El aparcamiento es gratuito. El desayuno se ofrece por un suplemento. Entre el resto de instalaciones que se incluyen en el hotel se encuentran una panadería cafetería, un bar restaurante moderno con terraza, un gimnasio y un spa.\"\n'," +
                 "4.6010598," +
                 "-74.0705079)," +
-                "('Hotel','@drawable/hoteltequendama','Hotel Tequendama y centro de convenciones\n'," +
+                "('Hotel'," +
+                "'@drawable/hoteltequendama'," +
+                "'Hotel Tequendama y centro de convenciones\n'," +
                 "'El Hotel Tequendama Bogotá, ubicado en pleno centro de Bogotá y a tan sólo 15 minutos del Aeropuerto Internacional El Dorado\n'," +
                 "'Cra. 10 #26-21, Bogotá, Cundinamarca\n'," +
                 "'\"El Hotel Tequendama Bogotá, ubicado en pleno centro de Bogotá y a tan sólo 15 minutos del Aeropuerto Internacional El Dorado, ofrece todos los servicios de un hotel 5 estrellas.\n" +
@@ -158,7 +162,8 @@ public class Database extends SQLiteOpenHelper {
                 " Además de tener la referencia del libro de recetas de familia, el chef tiene gran experiencia en el arte de cocinar, el cual también difunde a través de cursos de pasta fresca, de programas de televisión y de su blog.\n" +
                 " Con una presentación de los platos sobria y elaborada de los platos, el restaurante divide su carta entre pastas cortas, pastas frescas y pastas rellenas. Además de remontarse al nombre del sitio, ofreciendo un aparte para los platos Del Paraíso (ristottos), Del Purgatorio (tortellis y tortellonis) y Del Inferno (varias opciones). Su especialidad es la pasta rellena, como el Canelloni Dante. De otros platos, también se recomienda el risotto funghi, el spaghetti Tripomodoro y el Penne Primavera. Quienes desean otras opciones más ligeras, hay variedad de ensaladas y sopas. \n" +
                 " En un ambiente cálido y sencillo con mesas de madera, sillas rojas y manteles blancos, se puede disfrutar también de diferentes risottos, pescados y carnes.\n" +
-                " Un buen cierre por el sitio se puede hacer con un tiramisú y uno de los vinos seleccionados que tienen.\"\n',4.653567," +
+                " Un buen cierre por el sitio se puede hacer con un tiramisú y uno de los vinos seleccionados que tienen.\"\n'," +
+                "4.653567," +
                 "-74.0571337)");
     }
 
