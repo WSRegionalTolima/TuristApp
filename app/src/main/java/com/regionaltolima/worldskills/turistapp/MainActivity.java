@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Metodo Para Mostrar el Frgament Correspondiente
+     * Metodo Para Mostrar el Fragment Correspondiente
      */
     private void iniciarFragment() {
         setTitle(setTit());
