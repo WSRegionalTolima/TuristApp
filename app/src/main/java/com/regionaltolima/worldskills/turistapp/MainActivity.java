@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity
     InicioFragment fragmentInicio;
     SitiosFragment fragmentSitios;
 
+    MenuItem item_list, item_grid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,6 +118,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        /*item_list = menu.findItem(R.id.m_list);
+        item_grid = menu.findItem(R.id.m_grid);*/
         return true;
     }
 

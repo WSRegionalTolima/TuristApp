@@ -69,11 +69,6 @@ public class InicioFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View v = inflater.inflate(R.layout.fragment_inicio, container, false);
-       t = v.findViewById(R.id.r);
-        String imagen = "R.drawable.simonbolivar";
-        int imagenSitio = getContext().getResources().getIdentifier(imagen,null, getContext().getPackageName());
-        Toast.makeText(getContext(), ""+imagenSitio, Toast.LENGTH_SHORT).show();
-        t.setImageResource(imagenSitio);
        return  v;
     }
 

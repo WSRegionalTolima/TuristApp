@@ -94,9 +94,11 @@ public class SitiosFragment extends Fragment {
 
         llenarReciclerView();
 
+       LinearLayout.LayoutParams l = new LinearLayout.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.MATCH_PARENT);
         adapter = new AdaptadorSitios(listaSitios);
-        recyclerView.setAdapter(adapter);
 
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutParams(l);
         return view;
     }
 
